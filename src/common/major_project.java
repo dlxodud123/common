@@ -2,6 +2,8 @@ package common;
 
 import java.util.Scanner;
 
+import TV_.Tv;
+
 public class major_project {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -12,6 +14,10 @@ public class major_project {
 		case 1:
 			break;
 		case 2:
+			Tv t = new Tv();
+			t.powerOn();
+			t.Sound();
+			t.channel();
 			break;
 		case 3:
 			break;
