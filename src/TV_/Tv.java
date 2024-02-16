@@ -29,23 +29,26 @@ public class Tv {
 	Tv01 T = new Tv01();
 
 	public void powerOn() {
-		System.out.println("TV On/Off");
-		String po = sc.next();
-		if(po.equals("On")) {
-			T.setTv("On");
-			System.out.println("전원을 On합니다.");
+		while (true) {
 
-		}else if(po.equals("Off")) {
-			
-			T.setTv("Off");
-			System.out.println("전원을 Off합니다. ");
-			
+
+			System.out.println("TV On/Off");
+			String po = sc.next();
+			if(po.equals("On")) {
+				T.setTv("On");
+				System.out.println("전원을 On합니다.");
+				break;
+			}else if(po.equals("Off")) {
+				T.setTv("Off");
+				System.out.println("전원을 Off합니다. ");
+				System.exit(0);
 			}else {
-			System.out.println("버튼을 눌러주세요");
+				System.out.println("버튼을 눌러주세요");
+			}
 		}
 
 	}
-	
+
 	public void Sound() {
 		int i = 0;
 		while(true) {
@@ -62,28 +65,33 @@ public class Tv {
 				break;
 			}else {
 				System.out.println("입력해주세요");
-				
+
 			}
 		}
 	}
 	public void channel(){
 		int j = 0;
 		while(true){
-		System.out.println("채널을 설정합니다.Up/Down/종료");
-		String ch = sc.next();
-		if(ch.equals("Up")){
-			System.out.println(j++ +"번");
-			T.setChannel("Up");
-		}else if(ch.equals("Down")){
-			System.out.println(j-- +"번");
-			T.setChannel("Down");
-		}else if(ch.equals("종료")) {
-			T.setSound("종료");
-			break;
-		}else
-			System.out.println("입력해주세요");
+			System.out.println("채널을 설정합니다.Up/Down/종료");
+			String ch = sc.next();
+			if(ch.equals("Up")){
+				System.out.println(j++ +"번");
+				T.setChannel("Up");
+			}else if(ch.equals("Down")){
+				System.out.println(j-- +"번");
+				T.setChannel("Down");
+			}else if(ch.equals("종료")) {
+				T.setSound("종료");
+				break;
+			}else
+				System.out.println("입력해주세요");
 		}
 
+	}
+	public void display() {
+		powerOn();
+		Sound();
+		channel();
 	}
 
 }
