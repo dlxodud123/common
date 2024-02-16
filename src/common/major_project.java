@@ -2,6 +2,8 @@ package common;
 
 import java.util.Scanner;
 
+import aaa_package.airconditional;
+
 public class major_project {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -10,6 +12,8 @@ public class major_project {
 		
 		switch (func) {
 		case 1:
+			airconditional a = new airconditional();
+			a.display();
 			break;
 		case 2:
 			break;
