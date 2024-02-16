@@ -21,9 +21,7 @@ public class major_project {
 			break;
 		case 2:
 			Tv t = new Tv();
-			t.powerOn();
-			t.Sound();
-			t.channel();
+			t.display();
 			break;
 		case 3:
 			break;
