@@ -2,10 +2,9 @@ package common;
 
 import java.util.Scanner;
 
-
 import TV_.Tv;
-
 import aaa_package.airconditional;
+import massager.massager;
 
 
 public class major_project {
@@ -24,6 +23,8 @@ public class major_project {
 			t.display();
 			break;
 		case 3:
+			massager m = new massager();
+			m.display();
 			break;
 		default:
 			break;
